@@ -1,1 +1,361 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightForge - Advanced Analytics Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background-color: #000; }
+        .gradient-text { color: #fff; }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15); }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .counter { font-size: 2.5rem; font-weight: bold; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-chart-line text-2xl" style="color: #667eea;"></i>
+                    <span class="text-2xl font-bold gradient-text">InsightForge</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-300 hover:text-white">Features</a>
+                    <a href="#tools" class="text-gray-300 hover:text-white">Tools</a>
+                    <a href="#pricing" class="text-gray-300 hover:text-white">Pricing</a>
+                    <a href="/dashboard" class="px-4 py-2 rounded-lg text-white" style="background-color: #06b6d4;">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-20 px-4 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-gray-800 rounded-full mix-blend-multiply animate-float"></div>
+            <div class="absolute top-40 right-20 w-72 h-72 bg-gray-800 rounded-full mix-blend-multiply animate-float" style="animation-delay: 2s;"></div>
+        </div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Unlock Insights with AI-Powered Analytics</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Transform your data into actionable intelligence. Predict trends, optimize strategies, and drive growth with our advanced analytics platform.</p>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 reveal">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Why Choose InsightForge?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-sm card-hover">
+                    <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background-color: #06b6d4;">
+                        <i class="fas fa-brain text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">AI-Powered Insights</h3>
+                    <p class="text-gray-400">Advanced machine learning algorithms analyze patterns and predict future trends with high accuracy.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-sm card-hover">
+                    <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background-color: #06b6d4;">
+                        <i class="fas fa-bolt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Real-Time Processing</h3>
+                    <p class="text-gray-400">Process millions of data points instantly with our optimized infrastructure for lightning-fast insights.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-sm card-hover">
+                    <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background-color: #06b6d4;">
+                        <i class="fas fa-lock text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Enterprise Security</h3>
+                    <p class="text-gray-400">Bank-level encryption and compliance with industry standards keep your sensitive data safe.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-sm card-hover">
+                    <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background-color: #06b6d4;">
+                        <i class="fas fa-chart-bar text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Custom Dashboards</h3>
+                    <p class="text-gray-400">Create personalized dashboards with drag-and-drop widgets tailored to your specific needs.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-sm card-hover">
+                    <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background-color: #06b6d4;">
+                        <i class="fas fa-share-alt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Easy Integration</h3>
+                    <p class="text-gray-400">Connect seamlessly with your existing tools via APIs and pre-built integrations.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-sm card-hover">
+                    <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background-color: #06b6d4;">
+                        <i class="fas fa-headset text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">24/7 Support</h3>
+                    <p class="text-gray-400">Expert support team available around the clock to help you maximize your platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="py-20 px-4 bg-gray-900 reveal">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Our Analytics Tools</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- CLV Tool -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 border border-indigo-200 p-8 rounded-xl card-hover">
+                    <div class="mb-6">
+                        <i class="fas fa-user-chart text-4xl" style="color: #667eea;"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">CLV Prediction</h3>
+                    <p class="text-gray-600 mb-6">Predict customer lifetime value accurately and identify your most valuable customers for targeted retention strategies.</p>
+                    <ul class="space-y-2 mb-8 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>ML-powered predictions</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Segment analysis</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Export reports</li>
+                    </ul>
+                    <a href="/clv" class="block text-center py-3 rounded-lg text-white font-semibold transition" style="background-color: #06b6d4;">
+                        Open Tool <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Churn Prediction Tool -->
+                <div class="bg-gradient-to-br from-pink-50 to-rose-50 border border-pink-200 p-8 rounded-xl card-hover">
+                    <div class="mb-6">
+                        <i class="fas fa-user-slash text-4xl" style="color: #ec4899;"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Churn Prediction</h3>
+                    <p class="text-gray-600 mb-6">Identify customers at risk of leaving before it happens. Proactive retention starts with prediction.</p>
+                    <ul class="space-y-2 mb-8 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Real-time scoring</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Risk factors analysis</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Action recommendations</li>
+                    </ul>
+                    <a href="/churn" class="block text-center py-3 rounded-lg text-white font-semibold transition" style="background-color: #06b6d4;">
+                        Open Tool <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Segmentation Tool -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-8 rounded-xl card-hover">
+                    <div class="mb-6">
+                        <i class="fas fa-sitemap text-4xl" style="color: #10b981;"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Customer Segmentation</h3>
+                    <p class="text-gray-600 mb-6">Automatically group customers into meaningful segments based on behavior, demographics, and value.</p>
+                    <ul class="space-y-2 mb-8 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Behavioral clustering</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Dynamic segments</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Campaign targeting</li>
+                    </ul>
+                    <a href="#" class="block text-center py-3 rounded-lg text-white font-semibold transition hover:shadow-lg" style="background-color: #06b6d4;">
+                        Coming Soon <i class="fas fa-lock ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="gradient-bg py-20 px-4 text-white reveal" id="particles-js">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">10K+</h3>
+                    <p class="text-lg opacity-90">Active Users</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">500M+</h3>
+                    <p class="text-lg opacity-90">Data Points Processed</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">99.9%</h3>
+                    <p class="text-lg opacity-90">Uptime SLA</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">50+</h3>
+                    <p class="text-lg opacity-90">Enterprise Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Simple, Transparent Pricing</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="bg-white border-2 border-gray-200 p-8 rounded-xl hover:border-purple-300 transition">
+                    <h3 class="text-2xl font-bold mb-4">Starter</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$99</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Up to 1M data points</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>5 dashboards</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Basic support</li>
+                        <li class="opacity-50"><i class="fas fa-times text-gray-400 mr-2"></i>Custom integrations</li>
+                    </ul>
+                    <button class="w-full py-3 border-2 border-purple-600 text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition">Get Started</button>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-gray-800 border-2 border-purple-600 p-8 rounded-xl relative transform scale-105">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Popular</div>
+                    <h3 class="text-2xl font-bold mb-4">Professional</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$499</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Up to 50M data points</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited dashboards</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Priority support</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>API access</li>
+                    </ul>
+                    <button class="w-full py-3 text-white font-semibold rounded-lg hover:shadow-lg transition" style="background-color: #06b6d4;">Get Started</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white border-2 border-gray-200 p-8 rounded-xl hover:border-purple-300 transition">
+                    <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">Custom</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited data points</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Dedicated support</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Custom integrations</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>SLA guarantee</li>
+                    </ul>
+                    <button class="w-full py-3 border-2 border-purple-600 text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- VanillaTilt for interactive card tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        // initialize tilt
+        VanillaTilt.init(document.querySelectorAll('.card-hover'), { max: 15, speed: 400 });
+        // fade-in on scroll using IntersectionObserver
+            // animated counters
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const update = () => {
+                    const target = +counter.getAttribute('data-target');
+                    let value = +counter.innerText.replace(/\D/g,'');
+                    const increment = target / 200;
+                    if (value < target) {
+                        counter.innerText = Math.ceil(value + increment).toLocaleString();
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+                const obs = new IntersectionObserver(entries => {
+                    if (entries[0].isIntersecting) {
+                        update();
+                        obs.unobserve(counter);
+                    }
+                }, { threshold: 0.5 });
+                obs.observe(counter);
+            });
+            // particles background (simple inline setup avoids fetching a config file)
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 50 },
+                    size: { value: 3 }
+                },
+                interactivity: {
+                    events: { onhover: { enable: true, mode: 'repulse' } }
+                }
+            });
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+
+            // smooth scroll for nav links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-chart-line text-2xl" style="color: #667eea;"></i>
+                        <span class="text-xl font-bold text-white">InsightForge</span>
+                    </div>
+                    <p>Empowering businesses with AI-driven insights.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">Security</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">About</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p>&copy; 2024 InsightForge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
